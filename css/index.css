@@ -1,3 +1,9 @@
+.form-defaults {
+  padding: 0.8rem;
+  font-size: 1.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -136,6 +142,26 @@ html,
 body {
   font-family: 'Roboto', sans-serif;
 }
+body {
+  animation: fade-in 2s linear;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 h1,
 h2,
 h3,
@@ -235,13 +261,7 @@ img {
   padding: 20px;
 }
 header div.container {
-  padding-bottom: 1.25em;
-  border-bottom: 2px dashed #ccc;
-}
-@media (max-width: 500px) {
-  header div.container {
-    width: calc(100% - 4rem);
-  }
+  padding: 0 2rem;
 }
 header div.container h1 {
   margin: 2.5rem 0 1.8rem;
@@ -251,10 +271,12 @@ header div.container h1 {
     margin: 1.8rem 0 1.2rem;
   }
 }
-@media (max-width: 500px) {
-  .home {
-    padding: 0 2rem;
-  }
+header div.container p {
+  padding-bottom: 1.6rem;
+  border-bottom: 2px dashed #ccc;
+}
+.home {
+  padding: 0 2rem;
 }
 .home .content-section {
   margin: 30px 0;
@@ -344,7 +366,7 @@ header div.container h1 {
   }
 }
 .home .content-pick .btn {
-  padding: 1.4rem 0;
+  padding: 1.4rem 2rem;
   background: #117a8b;
   text-align: center;
   color: #FFFFFF;
@@ -355,4 +377,70 @@ header div.container h1 {
 }
 .home .content-pick .btn:hover {
   background: #17A2B8;
+}
+.home .sign-up {
+  margin-bottom: 2.4rem;
+  padding-top: 2rem;
+  border-top: 2px dashed #ccc;
+}
+.home .sign-up form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.home .sign-up form label {
+  width: 32%;
+}
+@media (max-width: 500px) {
+  .home .sign-up form label {
+    width: 100%;
+  }
+}
+.home .sign-up form label[for="message-area"] {
+  width: 100%;
+}
+.home .sign-up form input {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+  font-size: 1.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.home .sign-up form input::placeholder {
+  color: #cccccc;
+}
+.home .sign-up form textarea {
+  width: 100%;
+  min-height: 30rem;
+  margin-bottom: 1.6rem;
+  padding: 0.8rem;
+  font-size: 1.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.home .sign-up form textarea::placeholder {
+  color: #cccccc;
+}
+.home .sign-up form button[type="submit"] {
+  margin-left: auto;
+  padding: 1.4rem 2rem;
+  background: #117a8b;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.home .sign-up form button[type="submit"]:hover {
+  background: #17A2B8;
+}
+@media (max-width: 500px) {
+  .home .sign-up form button[type="submit"] {
+    width: 80%;
+    margin: auto;
+  }
 }
