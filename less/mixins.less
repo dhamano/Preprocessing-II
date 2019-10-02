@@ -1,1 +1,23 @@
 // Mixins in here
+.flex-this(@direction: row, @wrap: nowrap, @justify: flex-start, @align: flex-start) {
+    display: flex;
+    flex-direction: @direction;
+    flex-wrap: @wrap;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.buttoned(@darken-percentage: 5%, @font-size: 1rem, @radius: 6px) {
+    padding: 1.4rem 0;
+    background: darken(@button-bg, @darken-percentage);
+    text-align: center;
+    color: @white;
+    font-weight: bold;
+    font-size: @font-size;
+    border-radius: @radius;
+    cursor: pointer;
+
+    &:hover {
+    background: @button-bg;
+    }
+}

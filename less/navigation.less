@@ -1,1 +1,46 @@
 // Navigation Styles here
+.nav-container {
+  border-bottom: 2px dashed #ccc;
+
+  nav {
+    padding: 1.875em 0;
+    .flex-this(@justify: space-between, @align: center);
+
+    @media @mobile {
+      flex-direction: column;
+    }
+
+    span.logo {
+      font: 4.25rem/1em 'Indie Flower', cursive;
+
+      @media @mobile {
+        margin-bottom: 1.8rem;
+        font-size: 3rem;
+      }
+    }
+
+    ul {
+      .flex-this();
+
+      @media @mobile {
+        width: 80%;
+        justify-content: space-between;
+      }
+
+      li {
+        margin: 0 0.75em;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.6rem;
+
+        &:hover {
+          text-decoration: underline;
+          color: lighten(@text, 50%);
+        }
+      }
+    }
+  }
+}
