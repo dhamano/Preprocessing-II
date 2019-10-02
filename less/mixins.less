@@ -8,7 +8,7 @@
 }
 
 .buttoned(@darken-percentage: 5%, @font-size: 1rem, @radius: 6px) {
-    padding: 1.4rem 0;
+    padding: 1.4rem 2rem;
     background: darken(@button-bg, @darken-percentage);
     text-align: center;
     color: @white;
@@ -20,4 +20,23 @@
     &:hover {
     background: @button-bg;
     }
+}
+
+.rounded-bordered(@border-args, @border-radius-args) {
+    border: @border-args;
+    border-radius: @border-radius-args;
+}
+
+.form-defaults {
+    padding: 0.8rem;
+    font-size: 1.8rem;
+    .rounded-bordered(1px solid #ccc, 8px)
+}
+
+.keyframes(@animation-name; @args) {
+	@keyframes @animation-name { @args(); }
+}
+
+.animation(@args) {
+	animation: @args;
 }
